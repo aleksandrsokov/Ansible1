@@ -1,9 +1,9 @@
 ---
--name: Nginx | Install and configure NGINX
- hosts: nginx
- become: true
+- name: Nginx | Install and configure NGINX
+  hosts: web
+  become: true
 
- tasks:
+  tasks:
   - name: update
     apt: update_caches=yes
   
