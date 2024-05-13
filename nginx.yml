@@ -1,0 +1,13 @@
+---
+-name: Nginx | Install and configure NGINX
+ hosts: web
+ become: true
+
+ tasks:
+  - name: update
+    apt: update_caches=yes
+  
+  - name:  NGINX | Install NGINX
+    apt:
+      name: nginx
+      state: latest
