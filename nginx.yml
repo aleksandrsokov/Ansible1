@@ -1,6 +1,6 @@
 ---
 -name: Nginx | Install and configure NGINX
- hosts: web
+ hosts: nginx
  become: true
 
  tasks:
@@ -11,3 +11,5 @@
     apt:
       name: nginx
       state: latest
+
+
