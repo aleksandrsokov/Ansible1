@@ -1,0 +1,2 @@
+[web]
+nginx ansible_host=192.168.0.176  ansible_user=vagrant
