@@ -13,15 +13,19 @@
     apt:
       name: nginx
       state: latest
-    notify: - restart nginx
-    tags: -nginx-package
+    notify: 
+      - restart nginx
+    tags: 
+      - nginx-package
 
   - name: NGINX | Create NGINX config file from template
     template:
       src: templates/nginx.conf.j2
       dest: /tmp/nginx.conf
-      tags: - nginx-configuration
-    notify: - reload nginx
+      tags: 
+        - nginx-configuration
+    notify: 
+      - reload nginx
 
   handlers:
   - name: restart nginx
